@@ -2,11 +2,11 @@ import pickle
 
 import faiss
 import numpy as np
-from openai import OpenAI
+from fastembed import TextEmbedding
+from groq import Groq
 
 from config import (
-    OPENAI_API_KEY,
-    EMBEDDING_MODEL,
+    GROQ_API_KEY,
     LLM_MODEL,
     INDEX_FILE,
     METADATA_FILE,
@@ -14,16 +14,25 @@ from config import (
 )
 
 
+EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+
+
 class TayyabRAG:
+
     def __init__(self):
-        if not OPENAI_API_KEY:
+
+        if not GROQ_API_KEY:
             raise ValueError(
-                "OPENAI_API_KEY is missing. "
+                "GROQ_API_KEY is missing. "
                 "Add it to your .env file."
             )
 
-        self.client = OpenAI(
-            api_key=OPENAI_API_KEY
+        self.client = Groq(
+            api_key=GROQ_API_KEY
+        )
+
+        self.embedding_model = TextEmbedding(
+            model_name=EMBEDDING_MODEL
         )
 
         self.index = faiss.read_index(
@@ -34,26 +43,27 @@ class TayyabRAG:
             METADATA_FILE,
             "rb"
         ) as file:
-            self.metadata = pickle.load(
-                file
-            )
+            self.metadata = pickle.load(file)
 
         self.history = []
 
-    def embed_query(self, query):
-        response = self.client.embeddings.create(
-            model=EMBEDDING_MODEL,
-            input=[query]
-        )
 
-        embedding = response.data[0].embedding
+    def embed_query(self, query):
+
+        embedding = list(
+            self.embedding_model.embed(
+                [f"query: {query}"]
+            )
+        )[0]
 
         return np.array(
             [embedding],
             dtype="float32"
         )
 
+
     def retrieve(self, query):
+
         query_embedding = self.embed_query(
             query
         )
@@ -69,6 +79,7 @@ class TayyabRAG:
             distances[0],
             indices[0]
         ):
+
             if index < 0:
                 continue
 
@@ -84,13 +95,19 @@ class TayyabRAG:
 
         return retrieved_chunks
 
-    def build_context(self, retrieved_chunks):
+
+    def build_context(
+        self,
+        retrieved_chunks
+    ):
+
         context_parts = []
 
         for i, chunk in enumerate(
             retrieved_chunks,
             start=1
         ):
+
             context_parts.append(
                 f"[Source {i}: {chunk['source']}]\n"
                 f"{chunk['text']}"
@@ -100,7 +117,9 @@ class TayyabRAG:
             context_parts
         )
 
+
     def build_history(self):
+
         if not self.history:
             return "No previous conversation."
 
@@ -109,6 +128,7 @@ class TayyabRAG:
         history_text = []
 
         for message in recent_history:
+
             role = message["role"]
             content = message["content"]
 
@@ -120,11 +140,13 @@ class TayyabRAG:
             history_text
         )
 
+
     def generate_response(
         self,
         query,
         retrieved_chunks
     ):
+
         context = self.build_context(
             retrieved_chunks
         )
@@ -132,22 +154,23 @@ class TayyabRAG:
         history = self.build_history()
 
         system_prompt = """
-You are TayyabBot, a personalized RAG-based
-chatbot created for Muhammad Tayyab.
+You are TayyabBot, a personalized
+Retrieval-Augmented Generation chatbot
+created for Muhammad Tayyab.
 
 Your purpose is to answer questions about
 Tayyab using the personal dataset provided
-to you through retrieval.
+through retrieval.
 
 IMPORTANT RULES:
 
-1. Use the retrieved context as your primary
-   source of information.
+1. Use the retrieved context as your
+   primary source of information.
 
 2. Do not invent personal information.
 
 3. If the retrieved context does not contain
-   enough information to answer a question,
+   enough information to answer the question,
    clearly say that the information is not
    available in Tayyab's personal dataset.
 
@@ -156,17 +179,21 @@ IMPORTANT RULES:
 5. Keep answers clear, natural, and relevant.
 
 6. Use conversation history when it helps
-   understand the user's current question.
+   understand the current question.
 
-7. When appropriate, mention which personal
-   dataset source supports the answer.
+7. When appropriate, mention the dataset
+   source supporting the answer.
 
 8. You are TayyabBot, not Muhammad Tayyab.
    Never claim to personally be Tayyab.
 
-This is a Retrieval-Augmented Generation
-system. Your response should be grounded in
-the retrieved context.
+9. Stay grounded in the retrieved context.
+
+10. If the user asks a question unrelated
+    to Tayyab's personal information, explain
+    that TayyabBot is designed to answer
+    questions based on Tayyab's personal
+    dataset.
 """
 
         user_prompt = f"""
@@ -219,7 +246,9 @@ retrieved context and conversation history.
 
         return answer
 
+
     def ask(self, query):
+
         retrieved_chunks = self.retrieve(
             query
         )

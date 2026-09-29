@@ -22,24 +22,22 @@ The chatbot retrieves relevant information from this dataset and uses a Large La
 The system follows this pipeline:
 
 Personal Dataset
-↓
-Document Loading
-↓
-Text Preprocessing
-↓
-Text Chunking
-↓
-Embedding Generation
-↓
-FAISS Vector Database
-↓
-Similarity Retrieval
-↓
-Prompt Construction
-↓
-LLM Response Generation
-↓
-TayyabBot Response
+       ↓
+Preprocessing
+       ↓
+Chunking
+       ↓
+FastEmbed
+       ↓
+FAISS
+       ↓
+Retrieval
+       ↓
+Groq LLM
+       ↓
+Prompt + Conversation History
+       ↓
+Streamlit
 
 ## Technologies Used
 

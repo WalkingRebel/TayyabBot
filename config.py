@@ -2,11 +2,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-
-EMBEDDING_MODEL = "models/gemini-embedding-001"
-LLM_MODEL = "gemini-2.5-flash"
+LLM_MODEL = "openai/gpt-oss-20b"
 
 VECTORSTORE_DIR = "vectorstore"
 INDEX_FILE = os.path.join(VECTORSTORE_DIR, "index.faiss")

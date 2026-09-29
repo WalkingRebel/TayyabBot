@@ -3,12 +3,19 @@ import pickle
 
 import faiss
 import numpy as np
-from google import genai
-from light_embed import TextEmbedding
+from fastembed import TextEmbedding
 
+from config import (
+    CHUNK_SIZE,
+    CHUNK_OVERLAP,
+    VECTORSTORE_DIR,
+    INDEX_FILE,
+    METADATA_FILE,
+)
 
 
 DATASET_DIR = Path("dataset")
+EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 
 
 def clean_text(text):
@@ -94,41 +101,82 @@ def load_and_process_documents():
 
 
 def generate_embeddings(texts):
-    model = TextEmbedding("all-MiniLM-L6-v2")
+    print("Loading local embedding model...")
 
-    embeddings = []
+    model = TextEmbedding(
+        model_name=EMBEDDING_MODEL
+    )
 
-    for number, text in enumerate(texts, start=1):
-        print(f"Generating embedding {number}/{len(texts)}...")
-        embedding = model.embed(text)
-        embeddings.append(embedding)
+    print("Generating embeddings...")
 
-    return np.array(embeddings, dtype="float32")
+    embeddings = list(
+        model.embed(
+            [f"passage: {text}" for text in texts]
+        )
+    )
+
+    return np.array(
+        embeddings,
+        dtype="float32"
+    )
 
 
 def create_vectorstore(chunks):
-    texts = [chunk["text"] for chunk in chunks]
+    texts = [
+        chunk["text"]
+        for chunk in chunks
+    ]
 
-    embeddings = generate_embeddings(texts)
+    embeddings = generate_embeddings(
+        texts
+    )
 
     dimension = embeddings.shape[1]
 
-    index = faiss.IndexFlatL2(dimension)
+    index = faiss.IndexFlatL2(
+        dimension
+    )
+
     index.add(embeddings)
 
-    Path(VECTORSTORE_DIR).mkdir(parents=True, exist_ok=True)
+    Path(
+        VECTORSTORE_DIR
+    ).mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
-    faiss.write_index(index, INDEX_FILE)
+    faiss.write_index(
+        index,
+        INDEX_FILE
+    )
 
-    with open(METADATA_FILE, "wb") as file:
-        pickle.dump(chunks, file)
+    with open(
+        METADATA_FILE,
+        "wb"
+    ) as file:
+        pickle.dump(
+            chunks,
+            file
+        )
 
     print()
-    print("Vector database created successfully.")
-    print(f"Total vectors: {index.ntotal}")
-    print(f"Embedding dimension: {dimension}")
-    print(f"Index: {INDEX_FILE}")
-    print(f"Metadata: {METADATA_FILE}")
+    print(
+        "Vector database created successfully."
+    )
+    print(
+        f"Total vectors: {index.ntotal}"
+    )
+    print(
+        f"Embedding dimension: {dimension}"
+    )
+    print(
+        f"Index: {INDEX_FILE}"
+    )
+    print(
+        f"Metadata: {METADATA_FILE}"
+    )
+
 
 def main():
     print("=" * 60)
