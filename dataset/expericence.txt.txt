@@ -1,0 +1,42 @@
+Professional Experience
+
+Experience 1
+
+Organization:
+NetSol Technologies, Lahore
+
+Position:
+Software Engineering Intern
+
+Duration:
+3 months
+
+Description:
+I completed a three-month internship at NetSol Technologies in Lahore. During my internship, I worked on software development tasks under the guidance of a Senior Engineering Owner.
+
+Responsibilities and Work:
+
+* Developed an Inventory Management System.
+* Worked on backend and frontend development of the Inventory Management System.
+* Worked with technologies including Python, React, FastAPI, Celery, Alembic, HTML, TypeScript, CSS, Pydantic, and UV Package Manager.
+* Worked under the guidance of a Senior Engineering Owner.
+* Resolved software vulnerabilities using Snyk.
+* Worked on vulnerability resolution for the BWMNA project.
+
+Projects and Contributions:
+Inventory Management System:
+Developed an Inventory Management System that allows business owners to track and manage their inventory.
+
+BWMNA:
+Worked on resolving identified software vulnerabilities using Snyk as part of the BWMNA project.
+
+Key Areas:
+
+* Software Engineering
+* Backend Development
+* Frontend Development
+* API Development
+* Vulnerability Resolution
+* Software Security
+* Inventory Management
+* Team Collaboration

@@ -1,0 +1,26 @@
+Academic Courses
+
+Software Design and Architecture:
+Topics studied include object-oriented design, SOLID principles,
+design patterns, MVC architecture, client-server architecture,
+and microservices.
+
+Artificial Intelligence:
+Topics include machine learning concepts, classification,
+clustering, Naive Bayes, decision trees and related AI techniques.
+
+Natural Language Processing:
+Topics include tokenization, stemming, lemmatization,
+bag-of-words, TF-IDF, n-grams, language models, LSTM,
+Naive Bayes and text classification, Euclidean Similarity,
+Overlap Similarity and Dice Similarity.
+
+Information Retrieval:
+Topics include inverted indexes, TF-IDF, cosine similarity,
+Jaccard similarity, PageRank, HITS and index compression.
+
+Data Mining:
+Topics include data preprocessing, data mining techniques,
+clustering, K-Means, K-Medoids, hierarchical clustering,
+DBSCAN, classification, Naive Bayes, decision trees,
+confusion matrices and distance calculations.

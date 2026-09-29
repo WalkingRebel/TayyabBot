@@ -1,0 +1,26 @@
+Programming Skills
+
+Python:
+Tayyab has experience with Python programming, including basic programming,
+data structures, and introductory data science concepts.
+
+C++:
+Tayyab has experience with C++ programming and object-oriented programming.
+
+Python:
+Tayyab has experience with Python programming, especially when developing programs related to AI.
+
+
+Web Development:
+Tayyab has worked with HTML, CSS and TypeScript and has explored React.
+
+Technical Areas:
+- Object-Oriented Programming
+- Data Structures
+- Algorithms
+- Artificial Intelligence
+- Data Mining
+- Natural Language Processing
+- Deep Learning
+- Information Retrieval
+- Data Science

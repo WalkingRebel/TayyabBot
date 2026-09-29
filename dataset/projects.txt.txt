@@ -1,0 +1,66 @@
+Project 1
+
+Project Name:
+Inventory Management System
+
+Description:
+The Inventory Management System is a software application that allows business owners to keep track of and manage their inventory. The project was developed during my internship at NetSol, Lahore.
+
+Technologies Used:
+
+* Python
+* React
+* Celery
+* FastAPI
+* Alembic
+* HTML
+* TypeScript
+* CSS
+* Pydantic
+* UV Package Manager
+
+Project Purpose:
+The main purpose of the system is to help business owners efficiently manage and monitor their inventory.
+
+Development Context:
+This project was developed as part of my internship experience at NetSol, Lahore.
+
+Technical Areas:
+
+* Backend Development
+* Frontend Development
+* REST API Development
+* Database Migration
+* Asynchronous Task Processing
+* Data Validation
+* Inventory Management
+
+Project 2
+
+Project Name:
+Islamic RAG on Islamic Large Language Models: From Knowledge Acquisition to Trustworthy and Hallucination-Resistant AI
+
+Description:
+This project focuses on developing a Retrieval-Augmented Generation (RAG) system for Islamic knowledge. The system is designed to retrieve relevant information from a knowledge base and use the retrieved information to generate contextual responses.
+
+The project focuses on improving the reliability of AI-generated responses by grounding responses in retrieved Islamic knowledge. It aims to reduce hallucinations and provide responses based on relevant information available in the underlying knowledge base.
+
+Development Context:
+This project was developed independently after my internship, during my free time, as a personal project to explore Retrieval-Augmented Generation, Large Language Models, and trustworthy AI.
+
+Technologies Used:
+
+* Python
+* FastAPI
+* React
+* TypeScript
+* HTML
+* CSS
+
+Project Type:
+
+* Personal Project
+* Retrieval-Augmented Generation (RAG)
+* Large Language Models (LLMs)
+* Artifici
+

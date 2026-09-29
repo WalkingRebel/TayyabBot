@@ -1,0 +1,184 @@
+# MUHAMMAD TAYYAB RASHID
+
+**Software Engineering Student | AI & RAG Enthusiast | Software Developer**
+
+## PROFESSIONAL SUMMARY
+
+Software Engineering student at the University of Management and Technology (UMT), Lahore, with practical software development experience through a three-month internship at NetSol Technologies. Experienced in developing web-based applications using Python, FastAPI, React, TypeScript, and related technologies. Developed an Inventory Management System during the internship and worked on resolving software vulnerabilities using Snyk for the BWMNA project.
+
+Interested in Artificial Intelligence, Natural Language Processing, Information Retrieval, Data Mining, Retrieval-Augmented Generation (RAG), Large Language Models, and software engineering.
+
+## EDUCATION
+
+### University of Management and Technology (UMT), Lahore
+
+**BS Software Engineering**
+
+Currently pursuing a Bachelor's degree in Software Engineering.
+
+Relevant coursework includes:
+
+* Software Design and Architecture
+* Artificial Intelligence
+* Natural Language Processing
+* Information Retrieval
+* Data Mining
+
+### Intermediate
+
+**FSc Pre-Engineering**
+
+### Matriculation
+
+**Computer Science**
+
+## PROFESSIONAL EXPERIENCE
+
+### NetSol Technologies, Lahore
+
+**Software Engineering Intern** | 3 Months
+
+* Worked under the guidance of a Senior Engineering Owner.
+* Developed an Inventory Management System for tracking and managing business inventory.
+* Worked on backend and frontend development of the system.
+* Used Python, FastAPI, React, TypeScript, Celery, Alembic, Pydantic, HTML, CSS, and UV Package Manager.
+* Worked on resolving software vulnerabilities using Snyk.
+* Contributed to vulnerability resolution for the BWMNA project.
+* Gained practical experience in software development, API development, application security, and team-based engineering workflows.
+
+## PROJECTS
+
+### Inventory Management System
+
+**Developed during internship at NetSol Technologies**
+
+A web-based system designed to help business owners track and manage their inventory.
+
+**Technologies:**
+
+* Python
+* FastAPI
+* React
+* TypeScript
+* Celery
+* Alembic
+* Pydantic
+* HTML
+* CSS
+* UV Package Manager
+
+### Islamic RAG on Islamic Large Language Models
+
+**Personal Project**
+
+A Retrieval-Augmented Generation system focused on Islamic knowledge and Large Language Models. The project explores knowledge acquisition and the development of more trustworthy and hallucination-resistant AI responses by grounding generated responses in retrieved information.
+
+**Technologies:**
+
+* Python
+* FastAPI
+* React
+* TypeScript
+* HTML
+* CSS
+
+**Technical Areas:**
+
+* Retrieval-Augmented Generation (RAG)
+* Large Language Models
+* Natural Language Processing
+* Information Retrieval
+* Knowledge Acquisition
+* Semantic Search
+* AI Hallucination Reduction
+* Backend API Development
+* Frontend Development
+
+## TECHNICAL SKILLS
+
+**Programming Languages:**
+
+* Python
+* C++
+* Java
+
+**Web Development:**
+
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+* React
+
+**Backend & APIs:**
+
+* FastAPI
+* REST API Development
+
+**AI & Data:**
+
+* Artificial Intelligence
+* Natural Language Processing
+* Information Retrieval
+* Data Mining
+* Retrieval-Augmented Generation (RAG)
+* Large Language Models
+* Machine Learning
+
+**Software Engineering:**
+
+* Object-Oriented Programming
+* Software Design and Architecture
+* SOLID Principles
+* Design Patterns
+* MVC Architecture
+* Client-Server Architecture
+* Microservices
+
+**Tools & Technologies:**
+
+* Git
+* Snyk
+* Celery
+* Alembic
+* Pydantic
+* UV Package Manager
+
+## CERTIFICATIONS
+
+### Introduction to HTML, CSS, & JavaScript
+
+**IBM — Coursera**
+Online Certification
+
+### Introduction to Cloud Computing
+
+**IBM — Coursera**
+Online Certification
+
+### Introduction to Software Engineering
+
+**IBM — Coursera**
+Online Certification
+
+### Introduction to Personal Branding
+
+**University of Virginia — Coursera**
+Online Certification
+
+## AREAS OF INTEREST
+
+* Artificial Intelligence
+* Machine Learning
+* Natural Language Processing
+* Information Retrieval
+* Data Mining
+* Retrieval-Augmented Generation
+* Large Language Models
+* Software Engineering
+* Web Development
+* AI-powered Applications
+
+## CAREER OBJECTIVE
+
+To build a career in Software Engineering and Artificial Intelligence by applying software development skills to practical AI-driven applications while continuing to develop expertise in Machine Learning, Natural Language Processing, Information Retrieval, and Large Language Models.

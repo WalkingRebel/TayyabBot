@@ -1,0 +1,25 @@
+Education History
+
+Matriculation:
+Field: Computer Science
+
+Intermediate:
+Program: FSc Pre-Engineering
+
+Bachelor's Degree:
+Degree: BS Software Engineering
+University: University of Management and Technology (UMT), Lahore
+
+Relevant Courses:
+-Data Mining
+-Information Retrieval
+-Natural Language Processing
+-Artificial Intelligence
+-Software Engineering
+-Software Design and Algorithm
+
+Semester Information:
+-Completed Semesters: 5/8
+-Current Semester: Summer
+-Next Semester: 6
+-Semesters Left: 3

@@ -1,0 +1,69 @@
+Certifications
+
+Certification 1
+
+Name:
+Introduction to HTML, CSS, & JavaScript
+
+Issuing Organization:
+IBM
+
+Platform:
+Coursera
+
+Delivery:
+Online
+
+Area:
+Web Development
+
+Certification 2
+
+Name:
+Introduction to Cloud Computing
+
+Issuing Organization:
+IBM
+
+Platform:
+Coursera
+
+Delivery:
+Online
+
+Area:
+Cloud Computing
+
+Certification 3
+
+Name:
+Introduction to Software Engineering
+
+Issuing Organization:
+IBM
+
+Platform:
+Coursera
+
+Delivery:
+Online
+
+Area:
+Software Engineering
+
+Certification 4
+
+Name:
+Introduction to Personal Branding
+
+Issuing Organization:
+University of Virginia
+
+Platform:
+Coursera
+
+Delivery:
+Online
+
+Area:
+Personal Branding and Professional Development

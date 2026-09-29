@@ -1,0 +1,18 @@
+[project]
+name = "tayyab-chatbot"
+version = "1.0.0"
+description = "Personal RAG-based NLP chatbot using personal dataset, FAISS, embeddings, and LLM generation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faiss-cpu",
+    "google-genai>=2.25.0",
+    "light-embed>=1.0.9",
+    "numpy",
+    "openai",
+    "python-dotenv",
+    "streamlit",
+]
+
+[tool.uv]
+package = false
